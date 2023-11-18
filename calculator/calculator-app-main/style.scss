@@ -1,0 +1,360 @@
+/* tema 1 */
+/*Colores*/
+$menufondo: hsl(222, 26%, 31%);
+$fondocal: hsl(223, 31%, 20%);
+$pantallafondo: hsl(224, 36%, 15%);
+
+/*Keys */
+$fondodelyres: hsl(225, 21%, 49%);
+$sombradelyres: hsl(224, 28%, 35%);
+
+
+$fondoigual: hsl(6, 63%, 50%);
+$sombraigual: hsl(6, 70%, 34%);
+$fondoigual3: hsl(177, 92%, 70%);
+$sombraigual3: hsl(177, 92%, 70%);
+$teclafondo: hsl(30, 25%, 89%);
+$teclasombra: hsl(28, 16%, 65%);
+
+/* Textos tema1 y 2*/
+$colortecla: hsl(221, 14%, 31%);
+$blanco: hsl(0, 0%, 100%);
+$numero: hsl(0, 0%, 100%);
+
+
+/* Fuente */
+$font: 'Spartan', sans-serif;
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    font-family: $font;
+    background-color: $menufondo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.ocultar {
+  opacity: .1;
+}
+
+.mostrar {
+  opacity: 1;
+}
+
+.contenedor__principal {
+  width:100%;
+  height: 100vh;
+  margin:0;
+  padding:10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+
+  @media (min-width: 768px) {
+    width: 65%;
+    height: 100vh;
+    margin:0;
+    padding:10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  @media (min-width: 1024px) {
+    width: 52%;
+    padding:50px 60px 20px 60px;
+    min-height: 100vh;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.calculadora__contenedor {
+  min-width: 60%;
+  width: 100%;
+  max-width: 560px;
+  height: calc(100vh - 30px);
+  max-height: 700px;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    width: calc(100% - 30px);
+    max-width: 560px;
+    height: calc(100vh - 30px);
+    max-height: 700px;
+    padding: 10px;
+    
+  }
+
+  @media (min-width: 1024px) {
+    width: 550px;
+    max-width: 560px;
+    max-height: 600px;
+    padding: 5px 10px;
+    margin-bottom: auto;
+  }
+}
+
+.calculadora__encabezado {
+  width: 100%;
+  height: calc(10vh);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.calculadora__logo {
+  margin-right: auto;
+  font-size: 24px;
+  font-weight: 700;
+  color: $blanco;
+  margin-top: 10px;
+}
+
+.calculadora__switch {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tema__text {
+  font-size: 12px;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  color: $blanco;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 5px;
+
+  }
+
+}
+
+.switch__grupos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch__iconos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  order: 1;
+  background-color: $pantallafondo;
+  border-radius: 10px;
+}
+
+.circulos__switch {
+  width:1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: $fondoigual;
+  box-shadow: 0 0 2px 0 $sombraigual;
+  margin: 4px;
+}
+
+.switch__numeros {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.switch__nums {
+  margin: 0 8px;
+  color: $numero;
+}
+
+.pantalla__contenedor {
+  min-width: 100%;
+  width: calc(100%);
+  height: 14vh;
+  border-radius: 10px;
+  padding:12px 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 40px;
+  color: $blanco;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: $pantallafondo;
+}
+
+.pantalla__text {
+  color: $blanco;
+}
+
+#resultado {
+  font-size: 34px;
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 32px;
+  }
+}
+
+.teclas__contenedor {
+  min-width: 100%;
+  width: 100%;
+  height: calc(72vh);
+  background-color: $pantallafondo;
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.grupo__teclas {
+  min-width: 100%;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.boton {
+  min-width: 23.5%;
+  width: calc(23.5%);
+  max-width: 120px;
+  height: calc(100%);
+  padding: 7px 0;
+  margin: 0 auto;
+  background-color: $teclafondo;
+  border-radius: 10px;
+  color: $colortecla;
+  font-size: 32px;
+  font-weight: 700;
+  outline: none;
+  border:none;
+  border-bottom: 4px solid;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 34px;
+    padding: 7px 0;
+    min-width: 65px;
+    max-width: 135px;
+  }
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.boton:hover {
+  background-color: $blanco;
+  transform: scale(1.05);
+}
+
+input:hover {
+  background-color: '';
+  transform: scale(1.05);
+}
+
+input#del {
+  min-width: 23.5%;
+  width: calc(23.5%);
+  max-width: 120px;
+  height: calc(100%);
+  padding: 7px 0;
+  margin: 0 auto;
+  background-color: $fondodelyres;
+  border-radius: 10px;
+  color: $blanco;
+  font-size: 30px;
+  font-weight: 700;
+  border-bottom: 4px solid $sombradelyres;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 34px;
+    padding: 7px 0;
+    min-width: 65px;
+    max-width: 135px;
+  }
+}
+
+input#reset {
+  min-width: 49%;
+  width: 49%;
+  max-width: 49%;
+  padding: 7px 0;
+  margin: 0 5px;
+  background-color: $fondodelyres;
+  border-bottom:4px solid $sombradelyres;
+  border-radius: 10px;
+  color: $blanco;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+
+
+  
+  @media (min-width:768px) {
+    padding: 21px 0;
+    font-size: larger;
+
+  }
+}
+
+input#igual {
+  min-width: 49%;
+  width: 49%;
+  max-width: 49%;
+  padding: 7px 0;
+  margin: 0 5px;
+  background-color: $fondoigual;
+  border-radius: 10px;
+  color: $blanco;
+  font-size: 34px;
+  font-weight: 700;
+  border-bottom: 4px solid $sombraigual;
+
+  @media (min-width:768px) {
+    padding: 10px 0;
+  }
+}
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | calculadora app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+
+  <div class="contenedor__principal">
+
+    <div class="calculadora__contenedor">
+      <div class="calculadora__encabezado">
+       
+        <div class="calculadora__logo">
+          <span class="logo">calc</span>
+        </div>
+
+        <div class="calculadora__switch">
+         <span class="tema__text">THEME</span>
+            
+         <div class="switch__grupos">
+
+            <div class="switch__iconos">
+              <div data-tema="tema1" class="circulos__switch uno"></div>
+              <div data-tema="tema2" class="circulos__switch dos ocultar"></div>
+              <div data-tema="tema3" class="circulos__switch tres ocultar"></div>
+            </div>
+
+            <div class="switch__numeros">
+              <span id="nuno" class="switch__nums nuno">1</span>
+              <span id="ndos" class="switch__nums ndos">2</span>
+              <span id="ntres" class="switch__nums ntres">3</span>
+            </div>
+
+          </div>
+       
+    </div>
+  </div> 
+
+    <div class="pantalla__contenedor">
+          <span id="resultado" class="pantalla__text">0</span>
+    </div>
+
+
+  <div class="teclas__contenedor">
+
+    
+    <div class="grupo__teclas teclas1">
+        <button id="siete" value="7" class="boton">7</button>
+        <button id="ocho" value="8" class="boton">8</button>
+        <button id="nueve" value="9"  class="boton">9</button>      
+        <input type="button" id="del" value="DEL" class="del boton" />
+    </div>
+
+    <div class="grupo__teclas teclas2"> 
+        <button id="cuatro" value="4" class="boton">4</button>
+        <button id="cinco" value="5" class="boton">5</button>
+        <button id="seis" value="6" class="boton">6</button>        
+        <button id="suma" value="+" class="boton suma">+</button>
+  </div>
+
+  <div class="grupo__teclas teclas3">
+      <button id="uno" value="1" class="boton">1</button>
+      <button id="dos" value="2" class="boton">2</button>
+      <button id="tres" value="3" class="boton">3</button>
+      <button id="resta" value="-" class="boton resta">-</button>
+   </div> 
+
+
+    <div class="grupo__teclas teclas4"> 
+        <button id="punto" value="." class="boton punto">.</button>            
+        <button id="cero" value="0" class="boton">0</button>        
+        <button id="division" value="/" class="boton division">/</button>        
+        <button id="multiplicacion" value="*" class="boton multiplicacion">*</button>
+    </div>
+
+    <div class="grupo__teclas tecla5">        
+        <input type="button" id="reset" value="RESET" class="reset boton" />       
+        <input type="button" id="igual" value="=" class="igual boton" />
+    </div>
+
+  </div>
+
+  </div>
+
+  </div>
+<script src="app.js"></script>
+</body>
+</html>
